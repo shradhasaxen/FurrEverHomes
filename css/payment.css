@@ -1,0 +1,143 @@
+body{
+
+    background-color: #eee;
+}
+
+.container{
+
+    height: 100vh;
+
+}
+
+.payment-container {
+    background-color: #dee2ff;
+}
+
+.card{
+    border:none;
+}
+
+.form-control {
+    border-bottom: 2px solid #eee !important;
+    border: none;
+    font-weight: 600
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #8bbafe;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    border-bottom: 2px solid blue !important;
+}
+
+
+
+.inputbox {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+.inputbox span {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    transition: 0.5s
+}
+
+.inputbox i {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    transition: 0.5s;
+    color: #3F51B5
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+.inputbox input:focus~span {
+    transform: translateX(-0px) translateY(-15px);
+    font-size: 12px
+}
+
+.inputbox input:valid~span {
+    transform: translateX(-0px) translateY(-15px);
+    font-size: 12px
+}
+
+.card-blue{
+
+    background-color: #492bc4;
+}
+
+.hightlight{
+
+    background-color: #858ae3;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+#previous-button{
+    background-color: #858ae3;
+}
+.yellow{
+
+    color: #4e148c; 
+}
+
+.decoration{
+
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #492bc4;
+    border-color:#492bc4;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color:#492bc4;
+    border-color: #492bc4;
+}
+
+
+.decoration:hover{
+
+    text-decoration: none;
+    color: #4e148c; 
+}
+
+.message-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.message-content {
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}

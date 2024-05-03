@@ -1,0 +1,532 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@600&family=Orbitron&family=Pacifico&family=Rubik+Broken+Fax&family=Rubik+Glitch&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@600&family=Orbitron&family=Pacifico&family=Rubik+Broken+Fax&family=Rubik+Glitch&family=Satisfy&family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@600&family=Dancing+Script:wght@400..700&family=Orbitron&family=Pacifico&family=Rubik+Broken+Fax&family=Rubik+Glitch&family=Smooch&display=swap');
+
+/* General styles */
+* {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/* Navbar */
+.navbar {
+    overflow: hidden;
+    background-color: #3D405B;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar button {
+    float: left;
+    background-color: transparent;
+    border: none;
+    color: #f2f2f2;
+    cursor: pointer;
+    font-size: 30px;
+    outline: none;
+}
+
+.opt {
+    color: #f2f2f2;
+    font-size: smaller;
+}
+
+.opt:hover {
+    text-decoration: underline;
+}
+
+.navbar .brand {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    padding-left: 1px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .options {
+    float: right;
+}
+
+.paw {
+    height: 55px;
+    margin-top: 0.1rem;
+}
+
+/* Full-width image */
+.full-width-image {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: #3D405B;
+    margin-bottom: 20px;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    background-color: #3D405B;
+}
+
+/* Footer */
+.footer {
+    background-color: #EAE4E9;
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.footer-column {
+    text-align: left;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.footer-column h2 {
+    margin-left: 20px;
+}
+
+.footer-column a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    color: #666;
+}
+
+.footer-bottom a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: none;
+}
+
+/* Floating button */
+.floating-btn {
+    position: fixed;
+    bottom:15%;
+    right: 2%;
+    background-color: #3D405B; /* Changed to navbar color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    font-size: larger;
+}
+
+.floating-btn:hover {
+    background-color: #5E638A; /* Darker shade for hover effect */
+}
+
+/* Container */
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Blogging form */
+#blogForm, .popup-content {
+    margin-bottom: 20px;
+}
+
+.blog-inputs {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Blog post */
+.blog-post {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 25% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Center align the "Recent Blog Posts" text with underline */
+#blogList h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.full-width-image {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Caveat", cursive;
+    font-size: 4em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Adjustments for blog posts layout */
+.container {
+    margin-top: 50px; /* Adjust as needed */
+}
+
+#blogList {
+    padding: 20px;
+}
+
+
+
+
+
+/* Pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+.floating-btn:hover {
+    background-color: #5E638A;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+/* Form styling
+.container {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+#blogForm h2 {
+    font-size: 24px;
+    color: #3D405B;
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the content horizontally */
+}
+
+
+#blogForm .form-group {
+    margin-bottom: 20px;
+}
+
+#blogForm label {
+    font-weight: bold;
+    color: #3D405B;
+    display: block;
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox */
+    justify-content: center;
+}
+
+#blogForm input[type="text"],
+#blogForm input[type="number"],
+#blogForm textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px transparent;
+    border-radius: 5px;
+    font-size: 22px;
+    color: #555;
+
+}
+
+#blogForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#blogForm button {
+    background-color: #3D405B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px; /* Increase font size */
+    font-weight: bold; /* Make it bold */
+    transition: background-color 0.3s ease;
+    display: block; /* Center the button */
+    margin: 0 auto; /* Center the button */
+}
+
+#blogForm button:hover {
+    background-color: #5E638A;
+}
+
+
+
+
+/* Adjustments for blog posts layout */
+#blogList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Gap between columns */
+    padding: 20px;
+}
+
+.blog-post {
+    background-color: 	#3d405b14;;
+    border: 1px solid transparent;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    font-weight: bold;
+    font-size: medium;
+    height: 350px;
+    width: 450px;
+}
+
+.blog-content {
+    max-height: 33%; 
+    /* Limit height of content */
+    max-width: 33%;
+    overflow: hidden; /* Hide overflow */
+}
+
+
+.blog-post p {
+    margin-bottom: 1em; /* Add space after each paragraph */
+}
+
+.blog-post p:first-of-type {
+    font-size: medium; /* Increase font size of the first paragraph */
+}
+
+
+.blog-post {
+    border: 1px transparent;
+    
+    margin-bottom: 20px;
+    padding: 10px;
+    position: relative;
+    max-height: 300px; /* Adjust the maximum height as needed */
+    overflow-y: auto; /* Add vertical scrolling if content exceeds the height */
+}
+
+/* Width of the scrollbar */
+.blog-post::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.blog-post::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.blog-post::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+.blog-post::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.slider-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .slider-button:hover {
+    background-color: #555;
+  }
+  .chat-button img {
+    width: 40px;
+    height: 40px;
+  }
+  .chat-button{
+    
+    position: fixed;
+    bottom: 20px;
+    left : 20px;
+    background-color: black;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  
+}
+  .chat-box {
+    position: fixed;
+    bottom: 100px; /* Adjust the position as needed */
+    left: 20px;
+    width: 300px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black; /* Set the border color to black */
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5); /* Add a glowing effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  
+  .hidden {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+

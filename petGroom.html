@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grooming Details - FurrEverHomes</title>
+<link rel="stylesheet" href="css/petGroom.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />	
+</head>
+<body>
+    <div class="chat-button" onclick="toggleChat()">
+        <i class="fas fa-comment" style="color: #ffffff;"></i>
+      </div>
+    <div id="chat-box" class="chat-box hidden">
+        Coming Soon!
+      </div>
+    <a href="index.html" class="slider-button"><i class="fas fa-home" style="color: #ffffff;"></i></a>
+<div class="container">
+    <form id="groomingForm">
+      <h2>Are you a furry friend?<br> Because I'd love to pamper your pet with our top-notch <br> grooming service!</h2>
+          <input type="text" id="petName" name="petName" placeholder="Pet's Name" required>
+
+          <input type="text" id="ownerName" name="ownerName" placeholder="Owner's Name" required>
+      
+          <select id="petType" name="petType" required>
+            <option value="">Select Pet Type</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="other">Other</option>
+          </select>
+        
+          <input type="number" id="petAge" name="petAge" placeholder="Age of Pet (in months)" required>
+       
+          <textarea id="petAddress" name="petAddress" placeholder="Address of Pet" required></textarea>
+      
+          <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" pattern="[0-9]{10}" required>
+          <textarea id="otherSuggestions" name="otherSuggestions" placeholder="Any Other Specification/Note:"></textarea>
+           <br>
+           <button onclick="GroomingData(event)" >Submit</button>
+           <br>
+      </form>
+    </div>
+    
+
+
+<script> 
+  async function GroomingData(event) {
+    event.preventDefault();
+
+    const petName = document.getElementById('petName').value;
+    const ownerName = document.getElementById('ownerName').value;
+    const petType = document.getElementById('petType').value;
+    const petAge = document.getElementById('petAge').value;
+    const petAddress = document.getElementById('petAddress').value;
+    const mobileNumber = document.getElementById('mobileNumber').value;
+    const otherSuggestions = document.getElementById('otherSuggestions').value;
+
+    // Example of data validation
+    if (!petName || !ownerName || !petType || !petAge || !petAddress || !mobileNumber) {
+        alert('Please fill in all required fields');
+        return;
+    }
+
+    // Send data to backend for storage in MongoDB
+    try {
+        const response = await fetch('/submit-grooming-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                petName,
+                ownerName,
+                petType,
+                petAge,
+                petAddress,
+                mobileNumber,
+                otherSuggestions
+            })
+        });
+
+        if (response.ok) {
+            alert('We will contact you soon regarding timings, Thank you!');
+            window.location.href = 'index.html'; // Redirect to main page
+        } else {
+            alert('Submission failed. Please try again later.');
+        }
+    } catch (error) {
+        console.error('Error submitting grooming data:', error);
+        alert('An unexpected error occurred. Please try again later.');
+    }
+}
+
+function toggleChat() {
+  var chatBox = document.getElementById('chat-box');
+  chatBox.classList.toggle('hidden');
+}
+
+
+
+</script>
+    </body>
+    </html>

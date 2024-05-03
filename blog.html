@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - FurrEverHomes</title>
+<link rel="stylesheet" href="css/blog.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@600&family=Dancing+Script:wght@400..700&family=Orbitron&family=Pacifico&family=Rubik+Broken+Fax&family=Rubik+Glitch&family=Smooch&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-button" onclick="toggleChat()">
+    <i class="fas fa-comment" style="color: #ffffff;"></i>
+  </div>
+  <div id="chat-box" class="chat-box hidden">
+    Coming Soon!
+  </div>
+  <a href="blog.html" class="slider-button"><i class="fas fa-home" style="color: #ffffff;"></i></a>
+<audio id="pawSound1">
+  <source src="sound/barkkk.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="pawSound2">
+  <source src="sound/cat.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="pawSound3">
+  <source src="sound/bird.wav" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="navbar" style="font-size: 2em;">
+  <button onclick="playRandomSound()"><img src="https://em-content.zobj.net/source/softbank/145/paw-prints_1f43e.png" alt="🐾" class="paw"></button>
+  <a href="index.html" class="brand" style="font-weight: bold; font-size: inherit;">FurrEver Homes</a>
+  <div class="options">
+    <a href="addPet.html" class="opt" style="font-size: inherit;">Add Pet</a>
+    <a href="adoptPet.html" class="opt" style="font-size: inherit;">Adopt Pet</a>
+    <a href="signup.html" class="opt" style="font-size: inherit;">Sign Up</a>
+  </div>
+</div>
+<br><br><br>
+
+
+<div class="full-width-image">
+  <img src="https://w0.peakpx.com/wallpaper/166/583/HD-wallpaper-laptop-dog-glasses.jpg" alt="Blog Page Image">
+  <div class="overlay-text">BLOG PAGE</div>
+</div>
+
+<!-- Add the button for opening the pop-up -->
+<a href="#" id="openPopup" class="floating-btn">
+  ✍🏻Write Your Own Blog
+</a>
+
+<!-- Add the pop-up for writing a blog -->
+<div id="blogPopup" class="popup">
+  <div class="popup-content">
+      <span class="close" id="closePopup">&times;</span>
+      
+      <form id="blogForm">
+        <h2>Write Your Own Blog</h2>
+          <div class="blog-inputs">
+              <input type="text" id="userName" name="userName" placeholder="Your Name" required><br>
+              <input type="text" id="userAge" name="userAge" placeholder="Your Age" required><br>
+              <textarea id="userBlog" name="userBlog" rows="4" placeholder="Your Blog" required></textarea><br>
+          </div>
+          <button onclick="BloggingData(event)">Submit</button>
+      </form>
+  </div>
+</div>
+
+
+
+<div class="container" id="blogList">
+  <!-- Blog posts will be displayed here -->
+</div>
+
+
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-column">
+      <h2>FurrEverHomes</h2>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Brand Center</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h2>Help Center</h2>
+      <ul>
+        <li><a href="#">Discord Server</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Licensing</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h2>Download</h2>
+      <ul>
+        <li><a href="#">iOS</a></li>
+        <li><a href="#">Android</a></li>
+        <li><a href="#">Windows</a></li>
+        <li><a href="#">MacOS</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 <a href="#">FurrEverHomes</a>. All Rights Reserved.</span>
+  </div>
+</footer>
+
+
+<script src="./js/blog.js"></script>
+
+</body>
+</html>

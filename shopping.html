@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping - FurrEverHomes</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@600&family=Dancing+Script:wght@400..700&family=Orbitron&family=Pacifico&family=Rubik+Broken+Fax&family=Rubik+Glitch&family=Smooch&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-button" onclick="toggleChat()">
+        <i class="fas fa-comment" style="color: #ffffff;"></i>
+      </div>
+    <div id="chat-box" class="chat-box hidden">
+        Coming Soon!
+      </div>
+<audio id="pawSound1">
+  <source src="sound/barkkk.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="pawSound2">
+  <source src="sound/cat.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="pawSound3">
+  <source src="sound/bird.wav" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="navbar" style="font-size: 2em;">
+  <button onclick="playRandomSound()"><img src="https://em-content.zobj.net/source/softbank/145/paw-prints_1f43e.png" alt="🐾" class="paw"></button>
+  <a href="index.html" class="brand" style="font-weight: bold; font-size: inherit;">FurrEver Homes</a>
+  <div class="options">
+    <a href="addPet.html" class="opt" style="font-size: inherit;">Add Pet</a>
+    <a href="adoptPet.html" class="opt" style="font-size: inherit;">Adopt Pet</a>
+    <a href="signup.html" class="opt" style="font-size: inherit;">Sign Up</a>
+  </div>
+</div>
+
+<div class="full-width-image">
+  <img id="carouselImage" src="https://wallpapers.com/images/featured-small/dog-wj7msvc5kj9v6cyy.webp" alt="Carousel Image">
+</div>
+
+    
+<main>
+  <div class="accessories-container">
+      <h2>Pawtastic Accessories</h2>
+      <div class="product">
+          <img src="https://pawsindia.com/cdn/shop/files/2_-_Tuxedo_Bandana.png?v=1708200256" alt="Tuxedo Bandana">
+          <h2>Tuxedo Bandana</h2>
+          <p> <s>₹ 349</s> <h2 class="green"> ₹ 289</h2></p>
+          <button onclick="playSound()">Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://pawsindia.com/cdn/shop/files/GREENREFLECTIVEtagcollarANDLEASH_360x.jpg?v=1712133748" alt="Green Reflective Tag Collar and Leash">
+          <h2>Green Reflective Tag Collar and Leash</h2>
+          <p>₹ 169</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://pawsindia.com/cdn/shop/products/1_51_360x.jpg?v=1655981020" alt="Dog Chew Toy">
+          <h2>Cat Chew Toy</h2>
+          <p>₹ 199</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSraigV0St6UD-V5Nrrgs38kSTAjIHGENedPA&s" alt="Pet Bed">
+          <h2>Cat House</h2>
+          <p>₹ 299</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-QmEzFyLUWx5drh4atjwzPYGH6z5rZ3CTig&s" alt="Pet Grooming Kit">
+          <h2>Rabbit House</h2>
+          <p>₹ 139</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUBbpU9vm_UXh4XqFBTQ7-dfCjIjN6YTm6-g&s" alt="Pet Water Fountain">
+          <h2>Hamster play</h2>
+          <p><s>₹ 159 </s><h2 class="green"> ₹ 129</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7aTs5nK7wEOvpoEpkH2Z9jwDnGbidyJTw6w&s" alt="Pet Carrier">
+          <h2>Food Bowl</h2>
+          <p>₹ 269</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs079_c417ZOkwJbKEEUgp0LtNPLQWqYyPHA&s" alt="Pet GPS Tracker">
+          <h2> Pet Harness</h2>
+          <p>₹ 399</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwrxvigsMtMo-2AZYRFCfag2SHNrU3ZUEm6A&s" alt="Pet Raincoat">
+          <h2>Snuggle Buddy</h2>
+          <p><s>₹ 529</s><h2 class="green">₹ 329</h2></p>
+          <button>Add to cart</button>
+      </div>
+  </div>
+  
+  <br><br>
+  <div class="food-container">
+      <h2>NutriPaws</h2>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjhVZIzmLqbsKF9sqj48qNUlI_yY1ZERTwCA&s" alt="Z Flip Foldable Mobile">
+          <h2>Grain Zero Nutri</h2>
+          <p>₹ 229</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT03D1knCeg4N3OrIZaaxqJXkEByHPhJKG0w&s" alt="Air Pods Pro">
+          <h2>4 Pack Cat Heaven</h2>
+          <p>₹ 209</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5wiWsq6qJoyyJNo6fVYksh-36613GiRNZ-Q&s" alt="250D DSLR Camera">
+          <h2>Rabbit Food</h2>
+          <p><s>₹ 239</s><h2 class="green">₹ 139</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <!-- Additional products with pictures -->
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlxwiAp931yFizxBR0JBeZLE6v4Nee0QHOHQ&s" alt="Smart Watch">
+          <h2>Organic Heatlh Diet</h2>
+          <p><s>₹ 699</s><h2 class="green">₹ 399</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTltMkwViytzHdlRuC4Px2vczcPO-oJLpgqeQ&s" alt="Wireless Charging Pad">
+          <h2>Temptations</h2>
+          <p>₹ 139</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://hopeshealthytreats.com/cdn/shop/products/Whimzee.jpg?v=1620664961&width=533" alt="Noise-Cancelling Headphones">
+          <h2>Hamster Treats</h2>
+          <p>₹ 299</p>
+          <button>Add to cart</button>
+      </div>
+      <!-- Additional new products -->
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu-SJsEZvG2TIl6pZk94nohdc7Z0GifF9O4A&s" alt="Bluetooth Speaker">
+          <h2>Little One</h2>
+          <p>₹ 159</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB2icetX4qHsI2Qb9QR6zco6gcdq7UGAURQA&s" alt="Portable External Hard Drive">
+          <h2>Menu Rabbit</h2>
+          <p><s>₹ 299</s><h2 class="green">₹ 199</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWHF-RVRiO3BwbFGZKTTbfVq7opahX9kXmeA&s" alt="Wireless Mouse">
+          <h2>Pet Star</h2>
+          <p>₹ 299</p>
+          <button>Add to cart</button>
+      </div>
+  </div>
+  <br>
+  <div class="image-container">
+    <img src="https://pawsindia.com/cdn/shop/files/IPL-Web-Size-Compressed_1920x.jpg?v=1711809264" alt="IPL Image">
+</div>
+  <br>
+  <div class="toys-container">
+      <h2>Pawsome Toys</h2>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP84fZMpvGBE_5NrfklSdElj3XKiPY3X1lgw&s" alt="Z Flip Foldable Mobile">
+          <h2>Squishy Balls (3)</h2>
+          <p>₹ 339</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://images-cdn.ubuy.co.in/633ae46fca2b591f76221f5f-meohui-cat-toys-2pcs-retractable-cat.jpg" alt="Air Pods Pro">
+          <h2>Wand Toy</h2>
+          <p>₹ 169</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpC0rZy9vsLNuzNmGHanW1cO2WX6LaZ7H0aXGoe7fMMQ&s" alt="250D DSLR Camera">
+          <h2>CBC life</h2>
+          <p><s>₹ 439</s><h2 class="green">₹ 239</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <!-- Additional products with pictures -->
+      <div class="product">
+          <img src="https://img.kwcdn.com/product/fancy/b63b2c29-229a-4823-8f83-9155b754872e.jpg" alt="Smart Watch">
+          <h2>Interaction Toggle</h2>
+          <p>₹ 189</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYTRL45BWUyGS4JoxuSGtyCmiX_zu-HpxkLA&s" alt="Wireless Charging Pad">
+          <h2>Bone Pack of 6</h2>
+          <p><s>₹ 699</s><h2 class="green">₹ 399</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://www.thesprucepets.com/thmb/BO_0FeixzneigdvBAAOEqzBBCTs=/6000x0/filters:no_upscale():strip_icc()/Best-Dog-Toys-for-Mental-Enrichment-tout-aec84b8e73f54367ad3cd8658ed3bbf7.jpg" alt="Noise-Cancelling Headphones">
+          <h2>Brain Boosters</h2>
+          <p>₹ 259</p>
+          <button>Add to cart</button>
+      </div>
+      <!-- Additional new products -->
+      <div class="product">
+          <img src="https://goofytails.com/cdn/shop/products/71k2naQuhvL._SX679_-min.jpg?v=1676125236" alt="Bluetooth Speaker">
+          <h2>Goofy Toyee</h2>
+          <p><s>₹ 399</s><h2 class="green">₹ 199</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://m.media-amazon.com/images/I/71Y9BgtekKL.jpg" alt="Portable External Hard Drive">
+          <h2>Play Treat</h2>
+          <p>₹ 399</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/9ba0ad4aff61748ef2a4a7d79188ff74.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="Wireless Mouse">
+          <h2>Ham Squeeshy</h2>
+          <p>₹ 259</p>
+          <button>Add to cart</button>
+      </div>
+  </div>
+  <br>
+  <div class="image-container">
+    <img src="https://pawsindia.com/cdn/shop/files/Tags-Banner-Web_1920x.jpg?v=1711991996" alt="IPL Image">
+</div>
+  <br>
+  <div class="groom-container">
+      <h2>FluffCare</h2>
+      <div class="product">
+          <img src="https://m.media-amazon.com/images/I/71XwWzk837L._AC_UF1000,1000_QL80_.jpg" alt="Z Flip Foldable Mobile">
+          <h2>Pet Care Combo</h2>
+          <p><s>₹ 799</s><h2 class="green">₹ 499</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://thekindpet.com/cdn/shop/files/OrganicDogPawSalve_1080x.png?v=1695326767" alt="Air Pods Pro">
+          <h2>Nose Balm</h2>
+          <p>₹ 60</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://www.poochmate.com/cdn/shop/files/PM-July22--76_1.jpg?v=1691660992&width=533" alt="250D DSLR Camera">
+          <h2>Bath Essence</h2>
+          <p>₹ 239</p>
+          <button>Add to cart</button>
+      </div>
+      <!-- Additional products with pictures -->
+      <div class="product">
+          <img src="https://www.puruspet.com/udata/image/Image/IMG_5451-11.JPG" alt="Smart Watch">
+          <h2>Purus Care</h2>
+          <p>₹ 299</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://images.ctfassets.net/sfnkq8lmu5d7/2kYDtmz5cOc017ORI063OT/323865fc83c6658741bc8552d12c9542/2022-05-09_Eco-friendly_pet_grooming_products_oxyfresh-pet-dental-kits-value-size-try-me-kit_974d25f5-006f-41d9-900c-be34105.jpg?w=700&h=700&fl=progressive&q=70&fm=jpg" alt="Wireless Charging Pad">
+          <h2>Dental Kit</h2>
+          <p><s>₹ 339</s><h2 class="green">₹ 229</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://m.media-amazon.com/images/I/81l2Y+tTRZL.jpg" alt="Noise-Cancelling Headphones">
+          <h2>CareFur Kit</h2>
+          <p>₹ 150</p>
+          <button>Add to cart</button>
+      </div>
+      <!-- Additional new products -->
+      <div class="product">
+          <img src="https://moderndogmagazine.com/sites/default/files/images/uploads/etveda.jpg" alt="Bluetooth Speaker">
+          <h2>Shampoo Care</h2>
+          <p>₹ 509</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://indihopshop.com/cdn/shop/products/GroomingKit4.jpg?v=1669982198" alt="Portable External Hard Drive">
+          <h2>5 in 1 Kit</h2>
+          <p>₹ 499</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNu9Qfxozxwo5wDmui6EezttYmZvqvAHrXrA&s" alt="Wireless Mouse">
+          <h2>Furr Care</h2>
+          <p><s>₹ 399</s><h2 class="green">₹ 200</h2></p>
+          <button>Add to cart</button>
+      </div>
+  </div>
+      <br><br>
+  <div class="book-container">
+      <h2>Paw Pages</h2>
+      <div class="product">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTixyjMYx7zUOGtuvRq4aw-fC7DMd9vLRWR3nSd8jWkTw&s" alt="Z Flip Foldable Mobile">
+          <h2>Big Dogs & Puppy</h2>
+          <p>₹ 229</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://m.media-amazon.com/images/I/81k8HN7AlML._AC_UF1000,1000_QL80_.jpg" alt="Air Pods Pro">
+          <h2>Know Your Bird</h2>
+          <p>₹ 269</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://m.media-amazon.com/images/I/51l3yXKO5ZL.jpg" alt="250D DSLR Camera">
+          <h2>Hamster Care</h2>
+          <p><s>₹ 239</s><h2 class="green">₹ 199</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <!-- Additional products with pictures -->
+      <div class="product">
+          <img src="https://m.media-amazon.com/images/I/81BLqIDJTQL._AC_UF1000,1000_QL80_.jpg" alt="Smart Watch">
+          <h2>Hamisson</h2>
+          <p>₹ 380</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://i0.wp.com/ecolitbooks.com/wp-content/uploads/2023/11/Cats_EcoLitBooks.png?resize=327%2C498&ssl=1" alt="Wireless Charging Pad">
+          <h2>Hidden Languages of Catty</h2>
+          <p><s>₹ 259</s><h2 class="green">₹ 158</h2></p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://assets.penguinrandomhouse.com/wp-content/uploads/2021/05/11100600/PRH_Backlist-Birding_1200x628-mobile-header.jpg" alt="Noise-Cancelling Headphones">
+          <h2>4 in 1 Bookie</h2>
+          <p>₹ 590</p>
+          <button>Add to cart</button>
+      </div>
+      <!-- Additional new products -->
+      <div class="product">
+          <img src="https://m.media-amazon.com/images/I/51Zxye4qRnL._AC_UF894,1000_QL80_.jpg" alt="Bluetooth Speaker">
+          <h2>Know Your Cat</h2>
+          <p>₹ 250</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://www.dummies.com/covers/9781119755319.jpg" alt="Portable External Hard Drive">
+          <h2>Finches Dummies</h2>
+          <p>₹ 199</p>
+          <button>Add to cart</button>
+      </div>
+      <div class="product">
+          <img src="https://pamelakramercom.files.wordpress.com/2019/10/screen-shot-2019-10-31-at-9.12.59-pm.png" alt="Wireless Mouse">
+          <h2>3 in 1 Combo</h2>
+          <p><s>₹ 259</s><h2 class="green">₹ 159</h2></p>
+          <button>Add to cart</button>
+      </div>
+  </div>
+  
+
+  <aside id="cart">
+    <h2>Cart</h2><br>
+    <div class="cart-items"></div>
+    <p class="cart-total" style="font-weight:bolder ; font-size: xx-large;">Total: ₹0</p>
+    <button id="buy-now" onclick="redirectToPayment()">Buy Now</button>
+    <br><br>
+    <button id="close-cart">Close</button>
+</aside>
+
+  <button id="open-cart"><i class="fas fa-cart-shopping" style="color: white;"></i></button>
+  <a href="#" class="slider-button"><i class="fas fa-home" style="color: #ffffff;"></i></a>
+  </main>
+
+
+
+
+<section id="signup">
+  <footer class="footer">
+      <div class="footer-grid">
+          <div class="footer-column">
+              <h2>FurrEverHomes</h2>
+              <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Brand Center</a></li>
+                  <li><a href="#">Blog</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h2>Help Center</h2>
+              <ul>
+                  <li><a href="#">Discord Server</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h2>Legal</h2>
+              <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Licensing</a></li>
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h2>Download</h2>
+              <ul>
+                  <li><a href="#">iOS</a></li>
+                  <li><a href="#">Android</a></li>
+                  <li><a href="#">Windows</a></li>
+                  <li><a href="#">MacOS</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <span>© 2024 <a href="#">FurrEverHomes</a>. All Rights Reserved.</span>
+      </div>
+  </footer>
+</section>
+<script>
+
+const cart = document.getElementById('cart');
+const openCartButton = document.getElementById('open-cart');
+const closeCartButton = document.getElementById('close-cart');
+
+openCartButton.addEventListener('click', function() {
+    cart.classList.toggle('open');
+});
+
+closeCartButton.addEventListener('click', function() {
+    cart.classList.remove('open');
+});
+
+// Select all "Add to cart" buttons
+const addToCartButtons = document.querySelectorAll('.product button');
+
+// Add click event listener to each "Add to cart" button
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const product = this.closest('.product');
+        const productName = product.querySelector('h2').textContent;
+        let productPrice = 0;
+
+        // Check if the product price is marked with the "green" class
+        const priceElement = product.querySelector('p');
+        const greenPriceElement = product.querySelector('h2.green');
+        
+        if (greenPriceElement) {
+            // If a green price exists, extract discounted price
+            productPrice = parseFloat(greenPriceElement.textContent.slice(2));
+        } else if (priceElement.querySelector('.green')) {
+            // If marked green in the p tag, extract discounted price
+            productPrice = parseFloat(priceElement.querySelector('.green').textContent.slice(2));
+        } else {
+            // Otherwise, extract regular price from p tag
+            productPrice = parseFloat(priceElement.textContent.slice(2));
+        }
+
+        addToCart(productName, productPrice);
+        updateCartButton(); // Update cart button text
+    });
+});
+
+// Function to add item to cart
+function addToCart(name, price) {
+    const cart = document.getElementById('cart');
+    const cartItems = cart.querySelector('.cart-items');
+    const cartTotal = cart.querySelector('.cart-total');
+
+   // Create a new cart item element
+   const newItem = document.createElement('div');
+    newItem.classList.add('cart-item');
+    newItem.innerHTML = `
+    <span style="font-size:large;">${name} -</span>
+        <span style="font-size:large; ">₹${price}</span>
+        <button class="remove-item" style="background-color: transparent;
+         border-color: transparent; font-size: larger; margin-left: 30px;">
+    <i class="fas fa-trash-alt"></i> <!-- Font Awesome bin icon -->
+</button>
+    `;
+
+    // Add event listener to the remove button of the new item
+    const removeButton = newItem.querySelector('.remove-item');
+    removeButton.addEventListener('click', function() {
+        cartItems.removeChild(newItem);
+        updateCartTotal();
+        updateCartButton(); // Update cart button text
+    });
+
+    // Append the new item to the cart
+    cartItems.appendChild(newItem);
+
+    // Update the total price in the cart
+    updateCartTotal();
+}
+
+// Function to update the total price in the cart
+function updateCartTotal() {
+    const cart = document.getElementById('cart');
+    const cartItems = cart.querySelectorAll('.cart-item');
+    const cartTotal = cart.querySelector('.cart-total');
+
+    let total = 0;
+    cartItems.forEach(item => {
+        const price = parseFloat(item.querySelector('span:nth-child(2)').textContent.slice(1)); // Extract price from text and convert to float
+        total += price;
+    });
+
+    cartTotal.textContent = `Total: ₹${total.toFixed(2)}`;
+}
+
+// Function to update cart button text with the total number of items in the cart
+function updateCartButton() {
+    const cart = document.getElementById('cart');
+    const cartItems = cart.querySelectorAll('.cart-item');
+    const cartButton = document.getElementById('open-cart');
+    let cartIcon = cartButton.querySelector('i.fa-cart-shopping');
+
+    if (!cartIcon.nextElementSibling) {
+        cartIcon.insertAdjacentHTML('afterend', `<span class="cart-item-count">${cartItems.length}</span>`);
+    } else {
+        const itemCount = cartButton.querySelector('.cart-item-count');
+        itemCount.textContent = cartItems.length;
+    }
+}
+// Function to redirect to payment.html with total as a parameter
+function redirectToPayment() {
+    window.location.href = `payment.html`;
+}
+</script>
+<script src="js/shopping.js"></script>
+
+</body>
+</html>

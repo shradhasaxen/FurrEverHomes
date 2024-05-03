@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FurrEverHomes</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@600&family=Dancing+Script:wght@400..700&family=Orbitron&family=Pacifico&family=Rubik+Broken+Fax&family=Rubik+Glitch&family=Smooch&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="chat-button" onclick="toggleChat()">
+    <i class="fas fa-comment" style="color: #ffffff;"></i>
+  </div>
+  <div id="chat-box" class="chat-box hidden">
+    Coming Soon!
+  </div>
+  
+  <a href="index.html" class="slider-button"><i class="fas fa-home" style="color: #ffffff;"></i></a>
+<audio id="pawSound1">
+  <source src="sound/barkkk.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="pawSound2">
+  <source src="sound/cat.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<audio id="pawSound3">
+  <source src="sound/bird.wav" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<div class="navbar" style="font-size: 2em;">
+  <button onclick="playRandomSound()"><img src="https://em-content.zobj.net/source/softbank/145/paw-prints_1f43e.png" alt="🐾" class="paw"></button>
+  <a href="#" class="brand" style="font-weight: bold; font-size: inherit;">FurrEver Homes</a>
+  <div class="options">
+    <a href="addPet.html" class="opt" style="font-size: inherit;">Add Pet</a>
+    <a href="adoptPet.html" class="opt" style="font-size: inherit;">Adopt Pet</a>
+    <a href="signup.html" class="opt" style="font-size: inherit;">Sign Up</a>
+  </div>
+</div>
+
+<div class="full-width-image">
+    <img id="carouselImage" src="https://wallpapers.com/images/featured-small/dog-wj7msvc5kj9v6cyy.webp" alt="Carousel Image">
+    <a href="adoptPet.html" class="opt" style="font-size: inherit;">
+    <button class="adopt-button adopt-pet">Be My Family</button> </a>
+</div>
+
+<div class="container">
+  <h2 class="title">Exciting Services For Your Pets</h2>
+  <div class="button-container">
+    <button class="circle-button" onclick="redirectToShopping()">Shopping</button>
+    <button class="circle-button" onclick="redirectToAdoptPet()">Available Pet</button>
+    <button class="circle-button" onclick="redirectToBloging()">Bloging</button>
+  </div>
+  <br>
+  <br>
+  <div class="button-row">
+    <button class="circle-button" onclick="redirectToGroomingPage()">Grooming</button>
+    <button class="circle-button"onclick="redirectToPetHouse()">PetHouses</button>
+    <button  class="circle-button">Report an Injury</button>
+  </div>
+</div>
+<section class="why">
+  <div class="flex items-center justify-center pt-10 pb-0">
+      <h2 class="title">Why FurrEver Homes?</h2>
+  </div>
+  <div class="grid-container">
+      <!-- Card 1 -->
+      <div class="card">
+          <h5 class="card-title">Healthy Pet</h5>
+          <p class="card-description">Being pet lovers ourselves, we understand the importance of a pet’s health. All our puppies are at least eight weeks old when they are sent to you. Before your bundle of joy reaches you, he is required to undergo an extensive health checkup by a licensed veterinarian.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+          <h5 class="card-title">Vaccinated & Insured Pet</h5>
+          <p class="card-description">To make the initial experience with your furry family member smooth and trouble-free, we make sure that all our puppies are up-to-date on their vaccinations and are insured.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+          <h5 class="card-title">Responsible Breeders</h5>
+          <p class="card-description">All of our puppies are raised by responsible breeders who consider their pet’s health their foremost priority. We have zero tolerance for puppy mills and all our breeders are pet lovers just like us who are looking for the best homes for their fur babies.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+          <h5 class="card-title">Easy and Hassle-free Process</h5>
+          <p class="card-description">Your journey with a pet starts with no difficulties. You have access to adorable pets looking for furever homes nationwide. You can receive guidance regarding any pet-related aspect in the comfort of your home.</p>
+          
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+          <h5 class="card-title">Expert Pet Guidance</h5>
+          <p class="card-description">Our pet experts will guide you throughout your journey as a pet parent and will always be at your beck and call there to help you.</p>
+        
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+          <h5 class="card-title">Happy Pet Parenting</h5>
+          <p class="card-description">We don’t stop at providing you with a furry family member and guidance related to it. We are also connected with service providers such as veterinarians trainers, groomers, and hostels. We always make sure to provide you with the best of best to.</p>
+          
+      </div>
+  </div>
+</section>
+
+
+<section id="signup">
+  <footer class="footer">
+      <div class="footer-grid">
+          <div class="footer-column">
+              <h2>FurrEverHomes</h2>
+              <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Brand Center</a></li>
+                  <li><a href="#">Blog</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h2>Help Center</h2>
+              <ul>
+                  <li><a href="#">Discord Server</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h2>Legal</h2>
+              <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Licensing</a></li>
+                  <li><a href="#">Terms &amp; Conditions</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h2>Download</h2>
+              <ul>
+                  <li><a href="#">iOS</a></li>
+                  <li><a href="#">Android</a></li>
+                  <li><a href="#">Windows</a></li>
+                  <li><a href="#">MacOS</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <span>© 2024 <a href="#">FurrEverHomes</a>. All Rights Reserved.</span>
+      </div>
+  </footer>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

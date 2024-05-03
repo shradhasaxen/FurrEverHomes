@@ -1,0 +1,194 @@
+.slider-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .slider-button:hover {
+    background-color: #555;
+  }
+  .chat-button img {
+    width: 40px;
+    height: 40px;
+  }
+  .chat-button{
+    
+    position: fixed;
+    bottom: 20px;
+    left : 20px;
+    background-color: black;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  
+}
+  .chat-box {
+    position: fixed;
+    bottom: 100px; /* Adjust the position as needed */
+    left: 20px;
+    width: 300px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid black; /* Set the border color to black */
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5); /* Add a glowing effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  
+  .hidden {
+    display: none;
+  }
+
+
+/* Style for the container holding the pet data */
+#petList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items evenly across the container */
+   /* Change background color to whitesmoke */
+  padding: 20px; /* Add padding to create space between boxes */
+}
+
+/* Style for each individual pet container */
+.pet-container {
+  width: calc(23% - 20px); /* Adjust the width to fit four boxes per row */
+  background-color: whitesmoke;
+  margin-bottom: 40px; /* Increase space between boxes */
+  border: 1px solid #ddd; /* Add border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: transform 0.3s ease;
+  padding: 10px; /* Add padding inside the pet container */
+}
+
+/* Add hover effect to pet container */
+.pet-container:hover {
+  transform: scale(1.1); /* Scale up the container on hover */
+}
+
+/* Clear fix for starting a new row after every fourth pet container */
+.clear-fix {
+  clear: both;
+}
+
+/* Style for the pet picture */
+.pet-picture {
+  width: 100%; /* Make the picture fill the container */
+  height: 60%; /* Reduce the picture height */
+  border-radius: 5px; /* Add rounded corners */
+  margin-bottom: 10px; /* Add some space between the picture and other content */
+}
+
+/* Style for the pet info */
+.pet-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style for all text inside the pet container */
+.pet p {
+  font-size: 14px; /* Increase the font size of all text */
+  margin: 5px 0; /* Reduce the margin between paragraphs */
+}
+
+/* Style for the contact and details buttons */
+.contact-button,
+.details-button {
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: green; /* Change background color to green */
+  color: white;
+  border-radius: 2px;
+  width: 48%; /* Adjust width to fit two buttons in one line */
+}
+
+/* Add space between the contact and details buttons */
+.details-button {
+  margin-left: 4%; /* Add space between buttons */
+}
+
+/* Style for the "Get Pet" button */
+.get-pet-button {
+  margin-top: 10px;
+  width: 100%; /* Make button full width */
+  color: white;
+  background-color: #3D405B; /* Use the shade of blue you assigned */
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+/* Style for the container holding the "Get Pet" button */
+.get-pet-button-container {
+  margin-top: 10px; /* Add space between the "Get Pet" button and other buttons */
+}
+
+
+
+.overlay-text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Caveat", cursive;
+  font-size: 4em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+
+.full-width-image {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #3D405B;
+  margin-bottom: 20px;
+}
+
+.full-width-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  background-color: #3D405B;
+}
+
+
+.head{
+  justify-content: center;
+  font-weight: bold;
+  margin-left: 45.5%;
+  font-size: xx-large;
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+

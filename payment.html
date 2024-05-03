@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment-FurrEverHomes</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+<div class="container mt-5 px-5 payment-container"> 
+    <br>
+    <div class="container mt-5 px-5">
+
+        <div class="mb-4 text-center">
+
+            <h2>Confirm order and pay</h2>
+            <span>Please make the payment, after that you can enjoy moments with your furry friend!.</span>
+            
+        </div>
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-8">
+            
+
+            <div class="card p-3">
+
+                <h6 class="text-uppercase">Payment details</h6>
+                <div class="inputbox mt-3"> <input type="text" name="name" class="form-control" required="required"> <span>Name on card</span> </div>
+
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <i class="fa fa-credit-card"></i> <span>Card Number</span> 
+
+
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                         <div class="d-flex flex-row">
+
+
+                             <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Expiry</span> </div>
+
+                          <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>CVV</span> </div>
+                             
+
+                         </div>
+                        
+
+                    </div>
+                    
+
+                </div>
+
+
+
+                <div class="mt-4 mb-4">
+
+                    <h6 class="text-uppercase">Billing Address</h6>
+
+
+                    <div class="row mt-3">
+
+                        <div class="col-md-6">
+
+                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Street Address</span> </div>
+                            
+
+                        </div>
+
+
+                         <div class="col-md-6">
+
+                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>City</span> </div>
+                            
+
+                        </div>
+
+
+                        
+
+                    </div>
+
+
+                    <div class="row mt-2">
+
+                        <div class="col-md-6">
+
+                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>State/Province</span> </div>
+                            
+
+                        </div>
+
+
+                         <div class="col-md-6">
+
+                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Zip code</span> </div>
+                            
+
+                        </div>
+
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="mt-4 mb-4 d-flex justify-content-between">
+
+
+                <button id="previous-button" class="btn btn-primary px-3">Previous</button>
+                <!-- Pay button -->
+                <button id="pay-button" class="btn btn-success px-3">Pay Now</button>
+            </div>
+        </div>      
+    </div>
+  </div>    
+  <br>
+  </div>
+  <!-- Message box -->
+<div id="message-box" class="message-box">
+    <div class="message-content">
+        <span class="close-btn">&times;</span>
+        <h3>Your order is placed!</h3>
+        <p>Thank you for your payment. You can now enjoy moments with your furry friend!</p>
+        <button id="ok-button" class="btn btn-primary">OK</button>
+    </div>
+</div>
+
+</div>
+<script>
+    document.getElementById("pay-button").addEventListener("click", function() {
+        document.getElementById("message-box").style.display = "block";
+    });
+
+    document.querySelector(".close-btn").addEventListener("click", function() {
+        document.getElementById("message-box").style.display = "none";
+    });
+    document.getElementById("ok-button").addEventListener("click", function() {
+    window.location.href = "shopping.html";
+});
+document.getElementById("pay-button").addEventListener("click", function(event) {
+    // Prevent the default behavior of the button
+    event.preventDefault();
+
+    // Check if all required fields are filled
+    var isValid = true;
+    var inputs = document.querySelectorAll('.form-control');
+    inputs.forEach(function(input) {
+        if (!input.validity.valid) {
+            isValid = false;
+        }
+    });
+
+    // If all fields are filled, proceed with payment and display message box
+    if (isValid) {
+        // Show message box
+        document.getElementById("message-box").style.display = "block";
+    } else {
+        // Hide message box if any required field is empty
+        document.getElementById("message-box").style.display = "none";
+        // Alert user to fill in all required fields
+        alert("Please fill in all required fields.");
+    }
+});
+document.getElementById("previous-button").addEventListener("click", function() {
+    window.location.href = "shopping.html";
+});
+
+</script>
+</body>
+</html>

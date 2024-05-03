@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Pet - FurrEverHomes</title>
+<link rel="stylesheet" href="css/addPet.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="chat-button" onclick="toggleChat()">
+    <i class="fas fa-comment" style="color: #ffffff;"></i>
+  </div>
+  <div id="chat-box" class="chat-box hidden">
+    Coming Soon!
+  </div>
+  <a href="index.html" class="slider-button"><i class="fas fa-home" style="color: #ffffff;"></i></a>
+<div class="container">
+    <form id="addPetForm">
+      <h2 class="title">Finding a loving home for your cherished pet? <br>Fill out the information about your pet</h2>
+      <br>    
+      <input type="text" id="ownerName" name="ownerName" placeholder="Owner's Name" required>
+
+      <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" pattern="[0-9]{10}" required>
+      
+      <input type="text" id="state" name="state" placeholder="State" required>
+      
+      <input type="text" id="city" name="city" placeholder="City" required>
+  
+      <h2>Pet Details</h2>
+      <br>
+      <input type="text" id="petName" name="petName" placeholder="Pet's Name (optional)">
+
+      <input type="number" id="petAge" name="petAge" placeholder="Pet's Age (in months)" required>
+
+      <select id="petType" name="petType" required>
+            <option value="">Select Pet Type</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="bird">Bird</option>
+            <option value="other">Other</option>
+          </select>
+    
+      <input type="text" id="petBreed" name="petBreed" placeholder="Pet's Breed" required>
+      
+      <select id="petGender" name="petGender" required>
+            <option value="">Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+
+      <select id="vaccinationStatus" name="vaccinationStatus" required>
+            <option value="">Vaccination Status</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+      
+      <textarea id="petDescription" name="petDescription" placeholder="Pet Description"></textarea>
+      
+      <textarea id="reason" name="reason" placeholder="Reason for Giving the Pet"></textarea>
+      
+      <select id="adoptionOrSale" name="adoptionOrSale">
+            <option value="adoption">For Adoption</option>
+            <option value="sale">For Sale</option>
+          </select>
+         <input type="number" id="petPrice" name="petPrice" placeholder="Pet's Price (in ₹)" style="display:none;">
+          <br>
+         <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group float-left">
+          <h3>Upload Pictures:</h3>
+          <div class="instructions">
+              <strong>Tips for the upload</strong>:
+              <p>Ensure that the picture is clear and properly visible from multiple angles.</p>
+              <p>Accepted formats are .jpg, .gif, and .png.</p>
+              <p>Photo size must be less than 5mb.</p>
+              <p>Photos of pet parents with the pets are also acceptable.</p>
+          </div>
+          <br>
+          <div class="media_feedback">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div class="expandable-section">
+                    <div class="mmp_upload_file row" id="selectedPictures">
+                        <!-- Selected pictures will be displayed here -->
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div id="uploadPictures" class="uploadButton">
+            <label for="fluUpload" class="custom-file-upload mb-2">
+                Click To Choose Pictures
+            </label>
+            <input type="file" name="fluUpload" id="fluUpload" accept=".png,.jpg,.jpeg" multiple onchange="uploadPictures(this)" style="display:none;" />
+        </div>
+      </div>
+      
+      
+         <br>
+         <button onclick="addPet(event)">Submit</button>
+      <br>
+    </form>
+</div>
+<script>
+  document.getElementById("adoptionOrSale").addEventListener("change", function() {
+    var saleOption = document.getElementById("adoptionOrSale").value;
+    if (saleOption === "sale") {
+      document.getElementById("petPrice").style.display = "block";
+    } else {
+      document.getElementById("petPrice").style.display = "none";
+    }
+  });
+
+  function toggleExpandableSection() {
+    const section = document.querySelector('.expandable-section');
+    section.classList.toggle('collapsed');
+}
+
+function uploadPictures(fileUpload) {
+    const files = fileUpload.files;
+    const selectedPicturesDiv = document.getElementById('selectedPictures');
+    
+    // Loop through each selected file
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        
+        // Create an image element for each file
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file); // Set the image source to the file
+        img.width = 200; // Set the image width (adjust as needed)
+        img.height = 150; // Set the image height (adjust as needed)
+        img.style.marginRight = '10px'; // Add some margin between images
+        img.style.marginBottom = '10px'; // Add some margin bottom between rows
+
+        // Append the image to the selectedPicturesDiv
+        selectedPicturesDiv.appendChild(img);
+    }
+
+    // Expand the section after adding images
+    const section = document.querySelector('.expandable-section');
+    section.classList.remove('collapsed');
+}
+
+
+</script>
+<script src="./js/addPet.js"></script>
+
+</body>
+</html>
